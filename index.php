@@ -11,20 +11,21 @@ require_once 'ResidentialWay.php';
 
 /*var_dump(Car::ALLOWED_ENERGIES);
 
-$bike = new Bicycle('blue', 1);
+$bike = new Bicycle('blue', 1);*/
 $cars = new Car ('blue',5,'diesel');
-$truck = new Truck(100, 25, 'yellow', 3, "fuel");
+/*$truck = new Truck(100, 25, 'yellow', 3, "fuel");
 echo $bike->forward();
 var_dump($bike);
 var_dump($cars);
 echo $truck->isFull();
-var_dump($truck);
+var_dump($truck);*/
 
 
-echo $bike->forward();
+var_dump($car->$hasParkBrake);
+/*
 echo $bike->getCurrentSpeed();
 echo $bike->brake();
-echo $bike->getCurrentSpeed();*/
+echo $bike->getCurrentSpeed();
 
 
 echo "<br>";
@@ -36,7 +37,5 @@ echo "<br>";
 $residentialWay = new ResidentialWay ([], 2, 50);
 var_dump($motorWay);
 var_dump($pedestrianWay);
-var_dump($residentialWay);
+var_dump($residentialWay);*/
 
-//echo $cars->brake();
-//echo $cars->getCurrentSpeed(); 

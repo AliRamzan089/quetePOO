@@ -9,6 +9,10 @@ class Car extends Vehicle
         'electric',
     ];
     /**
+     * @var bool
+     */
+    private $hasParkBrake;
+    /**
      * @var string
      */
     private $energy;
@@ -45,5 +49,27 @@ class Car extends Vehicle
     public function setEnergyLevel(int $energyLevel): void
     {
         $this->energyLevel = $energyLevel;
+    }
+    public function setParkBrake(): string
+    {
+        if($hasParkBrake = true){
+            return "you can drive safely";
+        }else{
+            return "Too much used";
+        }
+        
+    }
+
+    public function start()
+    {
+        try {
+           if ($this->hasParkBrake == true) {
+            throw new Exception ('Park brake is on');}
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return $this->setParkBrake(false);
+        } finally {
+            echo "Ma voiture roule comme un donut";
+        }
     }
 }
